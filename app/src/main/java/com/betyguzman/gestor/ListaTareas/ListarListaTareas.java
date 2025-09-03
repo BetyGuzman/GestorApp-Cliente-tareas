@@ -30,7 +30,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class ListarListaTareas extends AppCompatActivity {
@@ -107,18 +109,29 @@ public class ListarListaTareas extends AppCompatActivity {
                     String fecha_limite = dataSnapshot.child("fecha_limite").getValue(String.class);
                     String estatus = dataSnapshot.child("estatus").getValue(String.class);
 
+                    if (titulo != null) {
+                        // 🔹 Validamos si la fecha límite ya pasó
+                        try {
+                            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd"); // ajusta al formato que uses
+                            Date fechaLimite = sdf.parse(fecha_limite);
+                            Date hoy = new Date();
 
-                    if (titulo != null) { // evita crasheos si hay datos antiguos
-                        Tareas tareas = new Tareas(id, titulo, descripcion, fecha_inicio, fecha_limite, estatus);
-                        if (estatus.contains("Compleado")){
-
-//                            String[] estatusTarea = {"Completado", "En Progreso", "No Completado"};
-
-
+                            if (fechaLimite != null && hoy.after(fechaLimite)) {
+                                if (!"No Completado".equals(estatus)) {
+                                    // 🔹 Actualiza en Firebase
+                                    databaseReference.child(id).child("estatus").setValue("No Completado");
+                                    estatus = "No Completado"; // también lo reflejamos localmente
+                                }
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
                         }
+
+                        Tareas tareas = new Tareas(id, titulo, descripcion, fecha_inicio, fecha_limite, estatus);
                         listaTarea.add(tareas);
                     }
                 }
+
 
                 adapterTarea = new AdapterTareas(listaTarea, ListarListaTareas.this);
                 adapterTarea.setOnTextClickListener(tareas -> mostrarDialogoOpciones(tareas));
