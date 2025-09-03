@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1043074373575",
+    "project_id": "gestor-app-de5a7",
+    "storage_bucket": "gestor-app-de5a7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1043074373575:android:a374e064e0072f5a01ebe2",
+        "android_client_info": {
+          "package_name": "com.betyguzman.gestor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDj7TyS7ClZnBclVpjbFSNzkeSw66M5O1Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

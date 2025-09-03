@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="azul">#2980B9</color>
+    <color name="verde">#229954</color>
+    <color name="gris">#F3F2F2</color>
+
+
+    <color name="blancoTrasparente">#E4F8FAF6</color>
+    <color name="oscurillo">#580B0F07</color>
+    <color name="blancusco">#BCFFFFFF</color>
+    <color name="turquesa">#9652A8A9</color>
+    <color name="progreso">#008EFF</color>
+    <color name="completado">#01950A</color>
+    <color name="nocompletado">#870000</color>
+
+
+
+    <color name="colorPrimary">#2980B9</color>
+    <color name="colorPrimaryDark">#1A5276</color>
+
+</resources>

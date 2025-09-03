@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CurrentLocation">
+        <activity
+            android:name=".MisDatos.EditarMisDatos"
+            android:exported="false" />
+        <activity
+            android:name=".Tareas.ListarTareas"
+            android:exported="false" />
+        <activity
+            android:name=".Tareas.EditarTareas"
+            android:exported="false" />
+        <activity
+            android:name=".Tareas.AgregarTareas"
+            android:exported="false" />
+        <activity
+            android:name=".Prioridades.ListarPrioridades"
+            android:exported="false" />
+        <activity
+            android:name=".Prioridades.EditarPrioridades"
+            android:exported="false" />
+        <activity
+            android:name=".Prioridades.AgregarPrioridades"
+            android:exported="false" />
+        <activity
+            android:name=".ListaTareas.ListarListaTareas"
+            android:exported="false" />
+        <activity
+            android:name=".ListaTareas.EditarListaTareas"
+            android:exported="false" />
+        <activity
+            android:name=".ListaTareas.AgregarListaTareas"
+            android:exported="false" />
+        <activity
+            android:name=".MisDatos.MisDatos"
+            android:exported="false" />
+        <activity
+            android:name=".Clientes.EditarClientes"
+            android:exported="false" />
+        <activity
+            android:name=".TipoClientes.AgregarTipoClientes"
+            android:exported="false" />
+        <activity
+            android:name=".TipoClientes.EditarListaClientes"
+            android:exported="false" />
+        <activity
+            android:name=".TipoClientes.ListaTipoClientes"
+            android:exported="false" />
+        <activity
+            android:name=".Clientes.AgregarCliente"
+            android:exported="false" />
+        <activity
+            android:name=".Clientes.ListaClientes"
+            android:exported="false" />
+        <activity
+            android:name=".Dashboard"
+            android:exported="false" />
+        <activity
+            android:name=".Registro"
+            android:exported="false" />
+        <activity
+            android:name=".PaginaWeb"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
